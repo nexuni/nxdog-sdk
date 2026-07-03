@@ -1,56 +1,65 @@
 # nxdog SDK
 
 The nxdog SDK lets customer applications control the nxnav ROS 2 navigation
-stack through a local HTTP API. It is intended to run directly on the robot
-host; Docker is not required.
+stack through a local HTTP API. The SDK runs directly on the dog's Jetson Orin
+NX; Docker is not required.
 
 The repository contains two main parts:
 
 - `interfaces/`: ROS 2 message, service, and action definitions used by nxnav.
 - `api/`: the Flask HTTP API server that customer applications should call.
 
-## Connect to the dog
+This guide first explains how to connect your development PC to the dog, then
+shows how to set up and run the SDK on the Jetson Orin NX.
 
-There are two ethernet ports visible on the rear of the dog. The upper one is from pi5, the lower one is from jetson orin nx (nx for short).
+## Connect to the Dog
 
+The rear of the dog has two visible Ethernet ports. The upper port connects to
+the Pi 5, and the lower port connects to the Jetson Orin NX. The rest of this
+README refers to the Jetson Orin NX as `nx`.
 
 <p align="center">
-  <img src="./docs/images/ethernet-ports.png" alt="Description of the image" style="width: 30%; max-width: 100%;" />
+  <img src="./docs/images/ethernet-ports.png" alt="Rear Ethernet ports on the dog" style="width: 30%; max-width: 100%;" />
 </p>
 
+Recommended development flow:
 
-Recommended development flow is:
-1. first use ethernet cable to directly connect from your PC to pi5 or nx, 
-2. configure your laptop's network interface with a static IPv4 address in the 192.168.123.0/24 subnet:
-  - IP address: 192.168.123.xxx (where xxx is any unused value between 1 and 254)
-  - Subnet mask: 255.255.255.0. 
-  - Gateway: 192.168.123.1.
-3. ssh into pi5 (ssh nexuni@192.168.123.20, pw: ingensys) or nx (ssh unitree@192.168.123.18, pw: 123).
-4. connect both pi5 and nx to one of your local wifi's.
+1. Connect your PC directly to either the Pi 5 or `nx` with an Ethernet cable.
+2. Configure your PC's Ethernet interface with a static IPv4 address on the
+   `192.168.123.0/24` subnet:
+   - IP address: `192.168.123.xxx`, where `xxx` is any unused value from `1` to `254`
+   - Subnet mask: `255.255.255.0`
+   - Gateway: `192.168.123.1`
+3. SSH into the Pi 5 or `nx`:
+   - Pi 5: `ssh nexuni@192.168.123.20`, password: `ingensys`
+   - nx: `ssh unitree@192.168.123.18`, password: `123`
+4. Connect both the Pi 5 and `nx` to the same local Wi-Fi network.
 
 ```bash
 sudo systemctl restart NetworkManager
 
-# check what wifi are detected
-sudo nmcli dev wifi list 
+# List detected Wi-Fi networks.
+sudo nmcli dev wifi list
 
-# connect to a wifi
-sudo nmcli dev wifi connect "<wifi ssid>" password "<wifi password>"
+# Connect to a Wi-Fi network.
+sudo nmcli dev wifi connect "<wifi-ssid>" password "<wifi-password>"
 ```
 
-5. restore the direct ethernet cable connection between nx and pi5.
+5. Restore the direct Ethernet cable connection between the Pi 5 and `nx`.
+6. Connect your PC to the same Wi-Fi network.
 
-6. connect your PC to the same wifi, 
+After these steps, your PC, `nx`, and the Pi 5 should all be on the same LAN.
+You can then:
 
+- SSH into either the Pi 5 or `nx` wirelessly.
+- Open the security frontend in a browser at `https://<pi5-ip>`.
+- Open the mapping frontend in a browser at `http://<nx-ip>:5089`.
 
-- After completing above steps, your PC, nx, and pi5 will all be in same LAN. 
-- you can then ssh into either pi5 or nx for development wirelessly. 
-- or open security frontend from your browser by typing this in the search bar: **https://\<pi5 ip\>**
-- or open mapping frontend from your browser by typing this in the search bar: **http://\<nx ip\>:5089**
+The rest of this README assumes that commands are run on `nx`.
 
 ## Setup
 
-Clone the nxdog SDK into `/home/unitree`, then enter the repository:
+SSH into `nx`, then clone the nxdog SDK into `/home/unitree`:
 
 ```bash
 cd /home/unitree
@@ -104,7 +113,7 @@ ros2 interface show nxnav_msgs/action/NavigateToPose
 ros2 interface show nxdog_interfaces/srv/SportCommand
 ```
 
-## Run The HTTP API Server
+## Run the HTTP API Server
 
 Use the HTTP endpoints in `api/app.py` as the nxdog SDK interface. The Flask server
 listens on port `5088`.
@@ -134,7 +143,7 @@ curl http://localhost:5088/nav_health
 curl http://localhost:5088/get_ready_flag
 ```
 
-## Use The HTTP Endpoints
+## Use the HTTP Endpoints
 
 Customer applications should integrate with the HTTP endpoints exposed by
 `api/app.py`. Each endpoint handler includes a docstring that describes what it
