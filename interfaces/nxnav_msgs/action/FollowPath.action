@@ -1,0 +1,14 @@
+# Goal
+nav_msgs/Path path
+string controller_id
+float64 speed
+float64 goal_tolerance_xy
+float64 goal_tolerance_yaw
+---
+# Result
+int32 error_code
+string error_msg
+---
+# Feedback
+float64 distance_remaining
+float64 speed

@@ -1,0 +1,8 @@
+# Goal
+string recovery_id
+---
+# Result
+int32 error_code
+string error_msg
+---
+# Feedback

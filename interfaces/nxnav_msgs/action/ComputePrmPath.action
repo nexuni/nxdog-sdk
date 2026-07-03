@@ -1,0 +1,16 @@
+# Goal
+geometry_msgs/PoseStamped start
+string start_map
+geometry_msgs/PoseStamped goal
+string goal_map
+bool smooth true
+---
+# Result
+nav_msgs/Path path
+float64 planning_time
+float64 total_cost
+int32 error_code
+string error_msg
+---
+# Feedback
+string status

@@ -1,0 +1,17 @@
+# Goal
+geometry_msgs/PoseStamped goal
+string goal_map
+string behavior_tree
+float64 goal_tolerance_xy 0.3
+float64 goal_tolerance_yaw 0.1
+float64 nav_speed 0.0
+---
+# Result
+int32 error_code
+string error_msg
+---
+# Feedback
+geometry_msgs/PoseStamped current_pose
+float64 distance_remaining
+float64 navigation_time
+int32 number_of_recoveries

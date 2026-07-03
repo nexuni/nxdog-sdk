@@ -1,0 +1,10 @@
+# Compute a cross-map route between two positions.
+string start_map
+geometry_msgs/Point start_position
+string goal_map
+geometry_msgs/Point goal_position
+---
+bool success
+string error_msg
+nxnav_msgs/RouteSegment[] segments
+float64 total_cost

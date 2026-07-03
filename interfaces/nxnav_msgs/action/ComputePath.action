@@ -1,0 +1,12 @@
+# Goal
+geometry_msgs/PoseStamped start
+geometry_msgs/PoseStamped goal
+string planner_id
+---
+# Result
+nav_msgs/Path path
+float64 planning_time
+int32 error_code
+string error_msg
+---
+# Feedback (planning is fast, no feedback needed)
