@@ -15,8 +15,8 @@ Clone the SDK into `/home/unitree`, then enter the repository:
 
 ```bash
 cd /home/unitree
-git clone <nxnav-sdk-repo-url> nxnav-sdk
-cd /home/unitree/nxnav-sdk
+git clone https://github.com/nexuni/nxdog-sdk.git nxdog-sdk
+cd /home/unitree/nxdog-sdk
 source /opt/ros/foxy/setup.bash
 ```
 
@@ -55,7 +55,7 @@ Source the SDK interfaces before running the HTTP API server:
 
 ```bash
 source /opt/ros/foxy/setup.bash
-source /home/unitree/nxnav-sdk/install/setup.bash
+source /home/unitree/nxdog-sdk/install/setup.bash
 ```
 
 You can verify that the generated interfaces are available with:
@@ -71,7 +71,7 @@ Use the HTTP endpoints in `api/app.py` as the SDK interface. The Flask server
 listens on port `5088`.
 
 ```bash
-cd /home/unitree/nxnav-sdk
+cd /home/unitree/nxdog-sdk
 source /opt/ros/foxy/setup.bash
 source install/setup.bash
 cd api
@@ -114,7 +114,7 @@ If Python cannot import `nxnav_msgs` or `nxdog_interfaces`, rebuild and source
 the SDK interfaces:
 
 ```bash
-cd /home/unitree/nxnav-sdk
+cd /home/unitree/nxdog-sdk
 source /opt/ros/foxy/setup.bash
 colcon build --base-paths interfaces --symlink-install
 source install/setup.bash
