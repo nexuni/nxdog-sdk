@@ -1,13 +1,19 @@
 # nxdog SDK
 
-The nxdog SDK lets customer applications control the nxnav ROS 2 navigation
-stack through a local HTTP API. The SDK runs directly on the dog's Jetson Orin
-NX; Docker is not required.
+The nxdog SDK lets customer applications control the robot dog through local
+ROS 2 integrations and an HTTP API. It covers nxnav ROS 2 navigation workflows
+as well as selected platform hardware features, including front VUI light color
+and brightness, VUI volume, charging control/status, and sport actions such as
+standing up, sitting down, walking, and recovery stand. The SDK runs directly
+on the dog's Jetson Orin NX; Docker is not required.
 
-The repository contains two main parts:
+The repository contains three main parts:
 
 - `interfaces/`: ROS 2 message, service, and action definitions used by nxnav.
-- `api/`: the Flask HTTP API server that customer applications should call.
+- `api/`: the Flask HTTP API server that customer applications should call for
+  navigation and platform-control endpoints.
+- `docs/`: user guides for related product tools, including the nxmap mapping
+  workflow.
 
 This guide first explains how to connect your development PC to the dog, then
 shows how to set up and run the SDK on the Jetson Orin NX.
@@ -154,7 +160,25 @@ Examples:
 ```bash
 curl http://localhost:5088/maps
 curl http://localhost:5088/odom
+curl http://localhost:5088/color
+curl -X POST http://localhost:5088/brightness \
+  -H "Content-Type: application/json" \
+  -d '{"brightness": 6}'
+curl -X POST http://localhost:5088/set_sport_action \
+  -H "Content-Type: application/json" \
+  -d '{"sport_action": "RecoveryStand"}'
 ```
+
+The API includes endpoints for map listing/loading, initial pose, velocity
+commands, navigation goals, route computation, odometry, navigation health,
+auto-charging, VUI light color/brightness, and platform sport actions.
+
+## Mapping Guides
+
+The mapping frontend is available at `http://<nx-ip>:5089` when nxmap is
+running. See [docs/mapping-quick-start-guide.md](docs/mapping-quick-start-guide.md)
+for the beginner nxmap workflow, including SLAM capture, point-cloud cleanup,
+2D navigation map generation, PRM graph generation, and map bundle export.
 
 ## Troubleshooting
 
