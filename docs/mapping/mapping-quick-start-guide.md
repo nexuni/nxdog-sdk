@@ -86,7 +86,7 @@ The result can be seen on left panel.
   <img src="../images/10.png" alt="Description of the image" style="width: 100%; max-width: 100%;" />
 </p>
 
-7. Export the map bundle as a `.zip` file. Notes, Name should include hyphen (-). e.g. "my-map" is not a valid name, but "mymap" is ok. The exported zip file can then be imported from security frontend for navigation use. See the user guide for security frontend for more details.
+7. Export the map bundle as a `.zip` file. Note: the map name should not include hyphens (`-`). For example, `my-map` is not a valid name, but `mymap` is valid. The exported zip file can then be imported into the security frontend for navigation use. See the [security frontend user guide](../security-frontend/security-frontend-user-guide.md) for more details.
 
 <p align="center">
   <img src="../images/11.png" alt="Description of the image" style="width: 100%; max-width: 100%;" />

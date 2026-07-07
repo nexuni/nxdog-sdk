@@ -11,7 +11,7 @@ services.
 
 - Product setup and connection guides.
 - nxmap mapping workflow documentation.
-- A placeholder area for the security frontend user guide.
+- Security frontend user guide and screenshots.
 - Example HTTP backend integration code.
 - ROS 2 message, service, and action definitions that match the robot-side
   nxnav and platform driver APIs.
@@ -40,7 +40,7 @@ docs/
     ros2-interfaces.md    Notes for the ROS 2 interface contract.
   mapping/
     mapping-quick-start-guide.md
-  security-frontend/      Reserved for the security frontend user guide.
+  security-frontend/      Security frontend user guide and images.
 ```
 
 ## Start Here
@@ -53,6 +53,8 @@ docs/
    [docs/integration/ros2-interfaces.md](docs/integration/ros2-interfaces.md)
 4. Review the nxmap beginner mapping workflow:
    [docs/mapping/mapping-quick-start-guide.md](docs/mapping/mapping-quick-start-guide.md)
+5. Review the security frontend user guide:
+   [docs/security-frontend/security-frontend-user-guide.md](docs/security-frontend/security-frontend-user-guide.md)
 
 ## Product Tool URLs
 
