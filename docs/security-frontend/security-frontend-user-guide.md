@@ -308,120 +308,66 @@ Status 面板顯示機器狗目前狀態，包括電量、充電狀態、馬達�
 
 ![][embedded-image-7]
 
-[goal-edit]: goal-edit.png
+[goal-edit]: images/goal-edit.png
+[image1]: images/image1.png
+[image2]: images/image2.png
+[plan-edit]: images/plan-edit.png
+[image3]: images/image3.png
+[image4]: images/image4.png
+[image5]: images/image5.png
+[image6]: images/image6.png
+[image7]: images/image7.png
+[image8]: images/image8.png
+[image9]: images/image9.png
+[image10]: images/image10.png
+[image11]: images/image11.png
+[image12]: images/image12.png
+[image13]: images/image13.png
+[image14]: images/image14.png
+[image15]: images/image15.png
+[image-init-pose]: images/image-init-pose.png
+[image-edit]: images/image-edit.png
+[image16]: images/image16.png
+[image17]: images/image17.png
+[image18]: images/image18.png
+[image19]: images/image19.png
+[image20]: images/image20.png
+[image21]: images/image21.png
+[image22]: images/image22.png
+[image23]: images/image23.png
+[image24]: images/image24.png
+[image25]: images/image25.png
+[image26]: images/image26.png
+[image27]: images/image27.png
+[image28]: images/image28.png
+[image29]: images/image29.png
+[image30]: images/image30.png
+[image31]: images/image31.png
+[image32]: images/image32.png
+[image33]: images/image33.png
+[image34]: images/image34.png
+[image35]: images/image35.png
+[image36]: images/image36.png
+[image37]: images/image37.png
+[image38]: images/image38.png
+[image39]: images/image39.png
+[image40]: images/image40.png
+[image41]: images/image41.png
+[image42]: images/image42.png
+[image43]: images/image43.png
+[image44]: images/image44.png
+[image45]: images/image45.png
+[image46]: images/image46.png
+[image47]: images/image47.png
+[image48]: images/image48.png
+[image49]: images/image49.png
+[image50]: images/image50.png
+[image51]: images/image51.png
 
-[image1]: image1.png
-
-[image2]: image2.png
-
-[plan-edit]: plan-edit.png
-
-[image3]: image3.png
-
-[image4]: image4.png
-
-[image5]: image5.png
-
-[image6]: image6.png
-
-[image7]: image7.png
-
-[image8]: image8.png
-
-[image9]: image9.png
-
-[image10]: image10.png
-
-[image11]: image11.png
-
-[image12]: image12.png
-
-[image13]: image13.png
-
-[image14]: image14.png
-
-[image15]: image15.png
-
-[image-init-pose]: image-init-pose.png
-
-[image-edit]: image-edit.png
-
-[image16]: image16.png
-
-[image17]: image17.png
-
-[image18]: image18.png
-
-[image19]: image19.png
-
-[image20]: image20.png
-
-[image21]: image21.png
-
-[image22]: image22.png
-
-[image23]: image23.png
-
-[image24]: image24.png
-
-[image25]: image25.png
-
-[image26]: image26.png
-
-[image27]: image27.png
-
-[image28]: image28.png
-
-[image29]: image29.png
-
-[image30]: image30.png
-
-[image31]: image31.png
-
-[image32]: image32.png
-
-[image33]: image33.png
-
-[image34]: image34.png
-
-[image35]: image35.png
-
-[image36]: image36.png
-
-[image37]: image37.png
-
-[image38]: image38.png
-
-[image39]: image39.png
-
-[image40]: image40.png
-
-[image41]: image41.png
-
-[image42]: image42.png
-
-[image43]: image43.png
-
-[image44]: image44.png
-
-[image45]: image45.png
-
-[image46]: image46.png
-
-[image47]: image47.png
-
-[image48]: image48.png
-
-[image49]: image49.png
-
-[image50]: image50.png
-
-[image51]: image51.png
-
-[embedded-image-1]: embedded-image-1.png
-[embedded-image-2]: embedded-image-2.png
-[embedded-image-3]: embedded-image-3.png
-[embedded-image-4]: embedded-image-4.png
-[embedded-image-5]: embedded-image-5.png
-[embedded-image-6]: embedded-image-6.png
-[embedded-image-7]: embedded-image-7.png
+[embedded-image-1]: images/embedded-image-1.png
+[embedded-image-2]: images/embedded-image-2.png
+[embedded-image-3]: images/embedded-image-3.png
+[embedded-image-4]: images/embedded-image-4.png
+[embedded-image-5]: images/embedded-image-5.png
+[embedded-image-6]: images/embedded-image-6.png
+[embedded-image-7]: images/embedded-image-7.png
